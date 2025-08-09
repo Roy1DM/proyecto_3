@@ -1,46 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="autor" content="Roy Deloiza">
-    <meta name="Descripcion" content="Informacion de contacto">
-    <title>Contacto</title>
+    <meta name="author" content="Roy Deloiza">
+    <meta name="description" content="Contacto Taco del 8">
+    <title>Contacto - Taco del 8</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Asegúrate de que la ruta coincida con el nombre real del CSS -->
+    <link rel="stylesheet" href="css/styles.css">
     <script src="js/main.js" defer></script>
 </head>
-
 <body>
     <header class="header">
-        <h1 class="header__h1">Taco del 8</h1>
+        <h1 class="header__h1">Taquería "Taco del 8"</h1>
         <nav class="header__nav">
             <ul class="header__ul">
-                <li>
-                    <a href="/">Inicio</a>
-                </li>
-                <li>
-                    <a href="/#menu">Menu</a>
-                </li>
-                <li>
-                    <a href="horario.html">Horario</a>
-                </li>
-                <li>
-                    <a href="acerca.html">Acerca de nosotros </a>
-                </li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="horario.html">Horario</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="acerca.html">Acerca de nosotros</a></li>
             </ul>
         </nav>
     </header>
-    <section class="hero">
-        <figure>
-            <img src="img/tacos_close_up_1000x649.png" alt="Tacos preparados" title="Tacos preparados"
-                width="1000" height="649">
-            <figcaption class="offscreen">
-                Para contacto mandar un correo a tacosdel8@gmail.com
-                
-            </figcaption>
-        </figure>
-    </section>
+
+    <main class="main">
+        <article class="main__article contact">
+            <h2 class="contact__h2">Contáctanos</h2>
+            <form class="contact__form" action="#" method="post">
+                <fieldset class="contact__fieldset">
+                    <legend class="offscreen">Formulario de contacto</legend>
+                    <p class="contact__p">
+                        <label class="contact__label" for="name">Nombre:</label>
+                        <input class="contact__input" type="text" id="name" name="name" required>
+                    </p>
+                    <p class="contact__p">
+                        <label class="contact__label" for="email">Correo electrónico:</label>
+                        <input class="contact__input" type="email" id="email" name="email" required>
+                    </p>
+                    <p class="contact__p">
+                        <label class="contact__label" for="message">Mensaje:</label>
+                        <textarea class="contact__textarea" id="message" name="message" rows="5" required></textarea>
+                    </p>
+                    <button class="contact__button" type="submit">Enviar</button>
+                </fieldset>
+            </form>
+        </article>
+    </main>
+
+    <hr>
+    <footer class="footer">
+        <p>
+            <span class="nowrap">Copyright &copy; <time id="year"></time> </span>
+            <span class="nowrap">Taco del 8</span>
+        </p>
+    </footer>
+</body>
+</html>
+
 
 
